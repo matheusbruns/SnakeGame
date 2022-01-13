@@ -8,7 +8,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="stage" width="400" height="400"></canvas>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+    body{
+      background-color: rgb(96, 207, 207);
+    }
+    h1{
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      text-align: center;
+    }
+    footer{
+      text-align: center;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+    .main{
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+  <h1>Snake Game</h1>
+  <div class="main">
+    <canvas id="stage" width="400" height="400"></canvas>
+  </div>
+  <footer><p>&copy; matheus_bruns</p></footer>
   
 
   <script src="script.js"></script>

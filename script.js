@@ -1,7 +1,7 @@
 window.onload = function(){
   var stage = document.getElementById('stage')
   var ctx   = stage.getContext("2d")
-
+  document.addEventListener("keydown", keyPush)
   setInterval(game, 60)
 
   const vel = 1
@@ -19,7 +19,7 @@ window.onload = function(){
   var ax=ay=15
 
   var trail = []
-  var tail = 5
+  tail = 5
 
   function game(){
     px += vx
@@ -44,12 +44,13 @@ window.onload = function(){
     ctx.fillStyle = "red"
     ctx.fillRect(ax*tp, ay*tp, tp,tp)
 
-    ctx.fillStyle = "gray"
+    ctx.fillStyle = "green"
     for(var i = 0; i<trail.length; i++){
-      ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp,tp)
+      ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1,tp-1)
       // se bater nela mesmo
       if(trail[i].x == px && trail[i].y == py){
         vx = vy = 0 //vai parar a cobra
+        tail =5
       }
     }
     trail.push({x:px,y:py})
@@ -57,13 +58,33 @@ window.onload = function(){
       trail.shift()
     }
     if(ax==px && ay==py){
-      taill++
+      tail++
       ax = Math.floor(Math.random()*qp)
       ay = Math.floor(Math.random()*qp)
     }
+  }
 
-
-
+  function keyPush(event){
+    switch (event.keyCode) {
+      case 37: // Left
+        vx = -vel
+        vy = 0
+        break;
+      case 38: // up
+        vx = 0
+        vy = -vel
+        break;
+      case 39: // right
+        vx = vel
+        vy = 0
+        break;
+      case 40: // down
+        vx = 0
+        vy = vel
+        break;
+      default:
+        break;
+    }
   }
 
 }
