@@ -53,8 +53,9 @@ window.onload = function(){
         tail =5
       }
     }
-    var res = document.getElementById('res')
-    res.innerHTML = `<h3>Pontuação: </h3> <p>${trail.length}</p>` //Mostra a pontuação
+    
+     var res = document.getElementById('res')
+     res.innerHTML = `<h3>Pontuação: </h3> <p>${trail.length}</p>` //Mostra a pontuação
 
     trail.push({x:px,y:py})
     while(trail.length > tail){
