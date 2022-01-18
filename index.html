@@ -10,12 +10,21 @@
 <body>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body{
-      background-color: rgb(96, 207, 207);
+      background: url(https://st2.depositphotos.com/1180762/6948/v/600/depositphotos_69488869-stock-illustration-soccer-grass-field.jpg);
+      font-family: 'Lemon', cursive;
+      background-repeat:repeat;
+      background-color: rgb(33, 102, 12);
     }
     h1{
       font-family: 'Poppins', sans-serif;
-      color: white;
+      color: rgb(207, 207, 207);
       text-align: center;
     }
     footer{
@@ -28,10 +37,12 @@
       justify-content: center;
     }
     #res{
-      width: 200px;
+      width: 250px;
+      padding: 0;
       margin: 0 auto;
       text-align: center;
-      background-color: rgb(146, 146, 146);
+      border: 1px solid rgba(0, 0, 0, 0.13);
+      background-color: rgba(0, 255, 0, 0.377);
       font-size: 1.2rem;
       display: flex;
       align-items: center;
@@ -40,11 +51,11 @@
       margin-bottom: 10px;
     }
     #res p{
-      color: rgb(81, 255, 0);
+      color: rgb(91, 255, 15);
       font-size: 30px;
     }
     #res h3{
-      color: #fff;
+      color: rgb(37, 41, 51);
     }
   </style>
   <h1>Snake Game</h1>
@@ -52,6 +63,7 @@
   <div class="main">
     <canvas id="stage" width="400" height="400"></canvas>
   </div>
+  <footer>© matheus_bruns</footer>
 
   <script src="script.js"></script>
 </body>
