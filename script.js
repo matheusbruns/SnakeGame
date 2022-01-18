@@ -53,6 +53,9 @@ window.onload = function(){
         tail =5
       }
     }
+    var res = document.getElementById('res')
+    res.innerHTML = `<h3>Pontuação: </h3> <p>${trail.length}</p>` //Mostra a pontuação
+
     trail.push({x:px,y:py})
     while(trail.length > tail){
       trail.shift()
@@ -85,6 +88,27 @@ window.onload = function(){
       default:
         break;
     }
+    switch (event.code) {
+      case "KeyA": // Left
+        vx = -vel
+        vy = 0 
+        break;
+      case "KeyW": // up
+        vx = 0
+        vy = -vel
+        break;
+      case "KeyD": // right
+        vx = vel
+        vy = 0
+        break;
+      case "KeyS": // down
+        vx = 0
+        vy = vel
+        break;
+      default:
+        break;
+    }
+    
   }
 
 }

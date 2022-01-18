@@ -27,13 +27,31 @@
       display: flex;
       justify-content: center;
     }
+    #res{
+      width: 200px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgb(146, 146, 146);
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    #res p{
+      color: rgb(81, 255, 0);
+      font-size: 30px;
+    }
+    #res h3{
+      color: #fff;
+    }
   </style>
   <h1>Snake Game</h1>
+  <div id="res"></div>
   <div class="main">
     <canvas id="stage" width="400" height="400"></canvas>
   </div>
-  <footer><p>&copy; matheus_bruns</p></footer>
-  
 
   <script src="script.js"></script>
 </body>
