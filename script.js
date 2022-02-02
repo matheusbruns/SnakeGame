@@ -9,17 +9,20 @@ window.onload = function(){
   // velocidade
   var vx = 0
   var vy = 0
+  
   //posição da cobra
   var px = 10
   var py = 15
+  
   // tamanho de cada quadradinho
   var tp = 20
   var qp = 20
+
   // posição da maçã
   var ax=ay=15
 
   var trail = []
-  tail = 5
+  tail = 1
 
   function game(){
     px += vx
@@ -50,7 +53,7 @@ window.onload = function(){
       // se bater nela mesmo
       if(trail[i].x == px && trail[i].y == py){
         vx = vy = 0 //vai parar a cobra
-        tail =5
+        tail = 1
       }
     }
     
